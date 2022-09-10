@@ -14,21 +14,26 @@ public class Postgress {
 			Connection conn=DriverManager.getConnection("jdbc:postgresql://localhost:5432/COVID_Data","postgres","Akshay@123");
 			Statement stmt=conn.createStatement();
 			ResultSet rs=stmt.executeQuery("SELECT * FROM public.\"Covid Data by Region\" limit 100");
-			System.out.println("Date Reported\tCountry Code\tCountry");
-			System.out.println("------------------------------------------------------");
-			while(rs.next())
-			{
-				System.out.println(rs.getString("Date_reported")+"\t"+rs.getString("Country_code")+"\t\t"+rs.getString("Country"));
-//				obj.put("Date_reported", rs.getString("Date_reported"));
-//				obj.put("Country_code", rs.getString("Country_code"));
-//				obj.put("Country", rs.getString("Country"));
-//				obj.put("WHO_region", rs.getString("WHO_region"));
-//				obj.put("New_cases", rs.getInt("New_cases"));
-//				obj.put("Cumulative_cases", rs.getInt("Cumulative_cases"));
-//				obj.put("New_deaths", rs.getInt("New_deaths"));
-//				obj.put("Cumulative_deaths", rs.getInt("Cumulative_deaths"));
-//				ja.put(obj);
-			}
+//			System.out.println("Date Reported\tCountry Code\tCountry");
+//			System.out.println("------------------------------------------------------");
+//			while(rs.next())
+//			{
+//				System.out.println(rs.getString("Date_reported")+"\t"+rs.getString("Country_code")+"\t\t"+rs.getString("Country"));
+////				obj.put("Date_reported", rs.getString("Date_reported"));
+////				obj.put("Country_code", rs.getString("Country_code"));
+////				obj.put("Country", rs.getString("Country"));
+////				obj.put("WHO_region", rs.getString("WHO_region"));
+////				obj.put("New_cases", rs.getInt("New_cases"));
+////				obj.put("Cumulative_cases", rs.getInt("Cumulative_cases"));
+////				obj.put("New_deaths", rs.getInt("New_deaths"));
+////				obj.put("Cumulative_deaths", rs.getInt("Cumulative_deaths"));
+////				ja.put(obj);
+//			}
+			ResultSetMetaData rsMetaData = rs.getMetaData();
+			int count = rsMetaData.getColumnCount();
+		      for(int i = 1; i<=count; i++) {
+		         System.out.println(rsMetaData.getColumnName(i));
+		      }
 			conn.close();
 		}
 		catch(Exception e)

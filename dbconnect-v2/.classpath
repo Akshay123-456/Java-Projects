@@ -35,5 +35,10 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/HP/Downloads/snowflake-jdbc-3.13.18-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HP/Downloads/redshift-jdbc42-2.1.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HP/Downloads/postgresql-42.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HP/Downloads/mysql-connector-java-8.0.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HP/Downloads/sqljdbc_8.2.2.0_enu/sqljdbc_8.2enu/mssql-jdbc-8.2.2.jre8.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

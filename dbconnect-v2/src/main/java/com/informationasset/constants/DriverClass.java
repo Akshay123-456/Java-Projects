@@ -1,15 +1,14 @@
 package com.informationasset.constants;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
-@AllArgsConstructor
-public enum DriverClass {
-MySQL("com.mysql.cj.jdbc.Driver"),
-PostgreSql("org.postgresql.Driver"),
-MSSql("com.microsoft.jdbc.sqlserver.SQLServerDriver"),
-Redshift("com.amazon.redshift.jdbc42.Driver"),
-Snowflake("com.snowflake.client.jdbc.SnowflakeDriver");
-	private String driverClass;
+@NoArgsConstructor
+public class DriverClass {
+private String MySQL="com.mysql.cj.jdbc.Driver";
+private String PostgreSql="org.postgresql.Driver";
+private String MsSQL="com.microsoft.jdbc.sqlserver.SQLServerDriver";
+private String Redshift="com.amazon.redshift.jdbc42.Driver";
+private String Snowflake="com.snowflake.client.jdbc.SnowflakeDriver";
 }
