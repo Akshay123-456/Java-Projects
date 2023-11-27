@@ -7,4 +7,8 @@ private String getMessage()
 {
 return message();	
 }
+  private int getCode(int statusCode)
+  {
+    return statusCode;
+  }
 }
