@@ -1,5 +1,6 @@
 package com.informationasset;
-
+/**
+This is an example of Javadoc comment.*/
 public class Test {
 
 	public static void main(String[] args) {
